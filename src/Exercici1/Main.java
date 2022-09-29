@@ -32,19 +32,19 @@ public class Main {
         //si de
         try {
             /**customer.setMemberType("Premiun")**/
-            customer.setMemberType("Gold");
-            System.out.println(customer.toString());
+            customer1.setMemberType("Gold");
+            System.out.println(customer1.toString());
         } catch (CustomerError e) {
             System.err.println("No Member Type Coincidences");
         }
-        Visit visit1 = new Visit(customer, new Date());
+        Visit visit1 = new Visit(customer1, new Date());
 
         try {
             visit.setServiceExpense(21.34);
             visit.setProductExpense(39);
-            System.out.println(visit.toString());
-            System.out.println("Descuento Servicio " + DiscountRate.getServiceDiscountRate(customer.getMemberType()));
-            System.out.println("Descuento Productos " + DiscountRate.getProductDiscountRate(customer.getMemberType()));
+            System.out.println(visit1.toString());
+            System.out.println("Descuento Servicio " + DiscountRate.getServiceDiscountRate(customer1.getMemberType()));
+            System.out.println("Descuento Productos " + DiscountRate.getProductDiscountRate(customer1.getMemberType()));
             System.out.println("Total Gastado " + visit.getTotalExpense());
         } catch (VisitError e) {
             System.err.println("Valores Introducidos No Validos");
